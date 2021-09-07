@@ -14,6 +14,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		97A34E8179300F8D0BABA606 /* libPods-WookieMovies.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76473D2EEE23BF61792BDB8E /* libPods-WookieMovies.a */; };
 		C361893E4A77273E9CD04885 /* libPods-WookieMovies-WookieMoviesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E077D0EEF1007FE72B8D124F /* libPods-WookieMovies-WookieMoviesTests.a */; };
+		C75FA2FE26E7784300B48AE6 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = C75FA2FD26E7784300B48AE6 /* Fonts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		6E14AB5CF5673221E803A379 /* Pods-WookieMovies-WookieMoviesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WookieMovies-WookieMoviesTests.debug.xcconfig"; path = "Target Support Files/Pods-WookieMovies-WookieMoviesTests/Pods-WookieMovies-WookieMoviesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		76473D2EEE23BF61792BDB8E /* libPods-WookieMovies.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WookieMovies.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = WookieMovies/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C75FA2FD26E7784300B48AE6 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
 		E077D0EEF1007FE72B8D124F /* libPods-WookieMovies-WookieMoviesTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WookieMovies-WookieMoviesTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F152D99E43C3F5DA3505A75E /* Pods-WookieMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WookieMovies.release.xcconfig"; path = "Target Support Files/Pods-WookieMovies/Pods-WookieMovies.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		13B07FAE1A68108700A75B9A /* WookieMovies */ = {
 			isa = PBXGroup;
 			children = (
+				C75FA2FD26E7784300B48AE6 /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -242,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C75FA2FE26E7784300B48AE6 /* Fonts in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
