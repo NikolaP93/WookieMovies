@@ -1,20 +1,20 @@
 import React, {useEffect} from 'react';
-import {Text, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import useMoviesData from '../modules/hooks/useMoviesData';
+import MovieList from '../components/MovieList/MovieList';
 
 const Home = (): JSX.Element => {
   const {movies, getMovies} = useMoviesData();
 
   useEffect(() => {
     getMovies();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <SafeAreaView style={styles.container}>
-      {movies.map(movie => (
-        <Text>{movie.title}</Text>
-      ))}
+      <MovieList categorizedMovies={movies} />
     </SafeAreaView>
   );
 };

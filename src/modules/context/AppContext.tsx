@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-type MovieType = {
+export type MovieType = {
   backdrop: string;
   cast: string[];
   id: string;

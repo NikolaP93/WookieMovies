@@ -11,7 +11,7 @@ function useMoviesData() {
       const {data} = await API.getMovies();
       dispatch({type: actions.setMoviesSuccess, payload: data.movies});
     } catch (e) {
-      console.log(e);
+      dispatch({type: actions.setMoviesError});
     }
   }
 
