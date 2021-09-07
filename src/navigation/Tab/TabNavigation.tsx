@@ -6,14 +6,41 @@ import Search from '../../screens/Search';
 import StackNavigation from '../Stack/StackNavigation';
 
 import config from '../config/config';
+import Icon, {IconProps} from '../../components/Icon/Icon';
 
 const Tab = createBottomTabNavigator();
+
+const homeIconProps: IconProps = {
+  color: 'black',
+  name: 'home',
+  size: 28,
+  type: 'font-awesome',
+};
+
+const searchIconProps: IconProps = {
+  color: 'black',
+  name: 'search',
+  size: 28,
+  type: 'font-awesome',
+};
 
 const TabNavigation = (): JSX.Element => {
   return (
     <Tab.Navigator screenOptions={config.screenOptions}>
-      <Tab.Screen name={TabRoutes.home} component={StackNavigation} />
-      <Tab.Screen name={TabRoutes.search} component={Search} />
+      <Tab.Screen
+        name={TabRoutes.home}
+        component={StackNavigation}
+        options={{
+          tabBarIcon: () => <Icon {...homeIconProps} />,
+        }}
+      />
+      <Tab.Screen
+        name={TabRoutes.search}
+        component={Search}
+        options={{
+          tabBarIcon: () => <Icon {...searchIconProps} />,
+        }}
+      />
     </Tab.Navigator>
   );
 };

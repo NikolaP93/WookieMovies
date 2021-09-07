@@ -1,11 +1,20 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import getIconType, {IconTypes} from '../../utils/getIconType';
 
-const Icon = (): JSX.Element => {
+export interface IconProps {
+  size: number;
+  name: string;
+  onPress?(): any;
+  color: string;
+  type: IconTypes;
+}
+
+const Icon = (props: IconProps): JSX.Element => {
+  const {color, name, onPress, size, type} = props;
+  const IconComponent = getIconType(type);
+
   return (
-    <View>
-      <Text />
-    </View>
+    <IconComponent size={size} name={name} color={color} onPress={onPress} />
   );
 };
 
