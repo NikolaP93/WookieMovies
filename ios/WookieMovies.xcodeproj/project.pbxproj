@@ -11,9 +11,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		24722972BF4DA3B2B4FCD6E4 /* libPods-WookieMovies.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E3CFB7D4ED568E3CC69FA5 /* libPods-WookieMovies.a */; };
-		599818CBB68595A5306DBF24 /* libPods-WookieMovies-WookieMoviesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9E8E72C4BFF33EFD17288B /* libPods-WookieMovies-WookieMoviesTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		97A34E8179300F8D0BABA606 /* libPods-WookieMovies.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76473D2EEE23BF61792BDB8E /* libPods-WookieMovies.a */; };
+		C361893E4A77273E9CD04885 /* libPods-WookieMovies-WookieMoviesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E077D0EEF1007FE72B8D124F /* libPods-WookieMovies-WookieMoviesTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +36,14 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WookieMovies/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WookieMovies/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WookieMovies/main.m; sourceTree = "<group>"; };
-		80E3CFB7D4ED568E3CC69FA5 /* libPods-WookieMovies.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WookieMovies.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E8A3C34740AF6151180B8CD /* Pods-WookieMovies-WookieMoviesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WookieMovies-WookieMoviesTests.release.xcconfig"; path = "Target Support Files/Pods-WookieMovies-WookieMoviesTests/Pods-WookieMovies-WookieMoviesTests.release.xcconfig"; sourceTree = "<group>"; };
+		6D1DE778A8DD0B2CE21B312D /* Pods-WookieMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WookieMovies.debug.xcconfig"; path = "Target Support Files/Pods-WookieMovies/Pods-WookieMovies.debug.xcconfig"; sourceTree = "<group>"; };
+		6E14AB5CF5673221E803A379 /* Pods-WookieMovies-WookieMoviesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WookieMovies-WookieMoviesTests.debug.xcconfig"; path = "Target Support Files/Pods-WookieMovies-WookieMoviesTests/Pods-WookieMovies-WookieMoviesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		76473D2EEE23BF61792BDB8E /* libPods-WookieMovies.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WookieMovies.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = WookieMovies/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A0486833B814DB09295C83BF /* Pods-WookieMovies-WookieMoviesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WookieMovies-WookieMoviesTests.release.xcconfig"; path = "Target Support Files/Pods-WookieMovies-WookieMoviesTests/Pods-WookieMovies-WookieMoviesTests.release.xcconfig"; sourceTree = "<group>"; };
-		AAFE718A9E1881D8FB07B4AF /* Pods-WookieMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WookieMovies.release.xcconfig"; path = "Target Support Files/Pods-WookieMovies/Pods-WookieMovies.release.xcconfig"; sourceTree = "<group>"; };
-		C3B4B7802B0EEE1928545C7D /* Pods-WookieMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WookieMovies.debug.xcconfig"; path = "Target Support Files/Pods-WookieMovies/Pods-WookieMovies.debug.xcconfig"; sourceTree = "<group>"; };
-		CF9E8E72C4BFF33EFD17288B /* libPods-WookieMovies-WookieMoviesTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WookieMovies-WookieMoviesTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCECF258AF3243F665ACADF5 /* Pods-WookieMovies-WookieMoviesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WookieMovies-WookieMoviesTests.debug.xcconfig"; path = "Target Support Files/Pods-WookieMovies-WookieMoviesTests/Pods-WookieMovies-WookieMoviesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E077D0EEF1007FE72B8D124F /* libPods-WookieMovies-WookieMoviesTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WookieMovies-WookieMoviesTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F152D99E43C3F5DA3505A75E /* Pods-WookieMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WookieMovies.release.xcconfig"; path = "Target Support Files/Pods-WookieMovies/Pods-WookieMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				599818CBB68595A5306DBF24 /* libPods-WookieMovies-WookieMoviesTests.a in Frameworks */,
+				C361893E4A77273E9CD04885 /* libPods-WookieMovies-WookieMoviesTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24722972BF4DA3B2B4FCD6E4 /* libPods-WookieMovies.a in Frameworks */,
+				97A34E8179300F8D0BABA606 /* libPods-WookieMovies.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				80E3CFB7D4ED568E3CC69FA5 /* libPods-WookieMovies.a */,
-				CF9E8E72C4BFF33EFD17288B /* libPods-WookieMovies-WookieMoviesTests.a */,
+				76473D2EEE23BF61792BDB8E /* libPods-WookieMovies.a */,
+				E077D0EEF1007FE72B8D124F /* libPods-WookieMovies-WookieMoviesTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,10 +109,10 @@
 		53F3321936A0685CEB4DDA8F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C3B4B7802B0EEE1928545C7D /* Pods-WookieMovies.debug.xcconfig */,
-				AAFE718A9E1881D8FB07B4AF /* Pods-WookieMovies.release.xcconfig */,
-				DCECF258AF3243F665ACADF5 /* Pods-WookieMovies-WookieMoviesTests.debug.xcconfig */,
-				A0486833B814DB09295C83BF /* Pods-WookieMovies-WookieMoviesTests.release.xcconfig */,
+				6D1DE778A8DD0B2CE21B312D /* Pods-WookieMovies.debug.xcconfig */,
+				F152D99E43C3F5DA3505A75E /* Pods-WookieMovies.release.xcconfig */,
+				6E14AB5CF5673221E803A379 /* Pods-WookieMovies-WookieMoviesTests.debug.xcconfig */,
+				5E8A3C34740AF6151180B8CD /* Pods-WookieMovies-WookieMoviesTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -155,12 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "WookieMoviesTests" */;
 			buildPhases = (
-				D9135A5EF70DD14C8535A24C /* [CP] Check Pods Manifest.lock */,
+				3BFF4343451F886F059B4880 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				03845E6EEE94CC8FA82CED1A /* [CP] Embed Pods Frameworks */,
-				341AF56B8DF62CBCA17EE636 /* [CP] Copy Pods Resources */,
+				D02BF882CB5D35E78A6FE56C /* [CP] Embed Pods Frameworks */,
+				229CB9441D0C310947A45E43 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,14 +176,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "WookieMovies" */;
 			buildPhases = (
-				9B33EAF0B2E0DAFE2DDC8089 /* [CP] Check Pods Manifest.lock */,
+				433913800E1A34399EB02190 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				279214D1601DF695694C841F /* [CP] Embed Pods Frameworks */,
-				9047E101081E12C8FF17C973 /* [CP] Copy Pods Resources */,
+				B1B01ED1556CE28809D27736 /* [CP] Embed Pods Frameworks */,
+				C57165FE736C91B4308A7569 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,41 +264,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		03845E6EEE94CC8FA82CED1A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WookieMovies-WookieMoviesTests/Pods-WookieMovies-WookieMoviesTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WookieMovies-WookieMoviesTests/Pods-WookieMovies-WookieMoviesTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WookieMovies-WookieMoviesTests/Pods-WookieMovies-WookieMoviesTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		279214D1601DF695694C841F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WookieMovies/Pods-WookieMovies-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WookieMovies/Pods-WookieMovies-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WookieMovies/Pods-WookieMovies-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		341AF56B8DF62CBCA17EE636 /* [CP] Copy Pods Resources */ = {
+		229CB9441D0C310947A45E43 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -315,24 +281,29 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WookieMovies-WookieMoviesTests/Pods-WookieMovies-WookieMoviesTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9047E101081E12C8FF17C973 /* [CP] Copy Pods Resources */ = {
+		3BFF4343451F886F059B4880 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WookieMovies/Pods-WookieMovies-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WookieMovies/Pods-WookieMovies-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WookieMovies-WookieMoviesTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WookieMovies/Pods-WookieMovies-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9B33EAF0B2E0DAFE2DDC8089 /* [CP] Check Pods Manifest.lock */ = {
+		433913800E1A34399EB02190 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -354,26 +325,55 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D9135A5EF70DD14C8535A24C /* [CP] Check Pods Manifest.lock */ = {
+		B1B01ED1556CE28809D27736 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WookieMovies/Pods-WookieMovies-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WookieMovies-WookieMoviesTests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-WookieMovies/Pods-WookieMovies-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WookieMovies/Pods-WookieMovies-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C57165FE736C91B4308A7569 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WookieMovies/Pods-WookieMovies-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WookieMovies/Pods-WookieMovies-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WookieMovies/Pods-WookieMovies-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D02BF882CB5D35E78A6FE56C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WookieMovies-WookieMoviesTests/Pods-WookieMovies-WookieMoviesTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WookieMovies-WookieMoviesTests/Pods-WookieMovies-WookieMoviesTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WookieMovies-WookieMoviesTests/Pods-WookieMovies-WookieMoviesTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -428,7 +428,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCECF258AF3243F665ACADF5 /* Pods-WookieMovies-WookieMoviesTests.debug.xcconfig */;
+			baseConfigurationReference = 6E14AB5CF5673221E803A379 /* Pods-WookieMovies-WookieMoviesTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -455,7 +455,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0486833B814DB09295C83BF /* Pods-WookieMovies-WookieMoviesTests.release.xcconfig */;
+			baseConfigurationReference = 5E8A3C34740AF6151180B8CD /* Pods-WookieMovies-WookieMoviesTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -479,7 +479,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3B4B7802B0EEE1928545C7D /* Pods-WookieMovies.debug.xcconfig */;
+			baseConfigurationReference = 6D1DE778A8DD0B2CE21B312D /* Pods-WookieMovies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -506,7 +506,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AAFE718A9E1881D8FB07B4AF /* Pods-WookieMovies.release.xcconfig */;
+			baseConfigurationReference = F152D99E43C3F5DA3505A75E /* Pods-WookieMovies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

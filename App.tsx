@@ -1,19 +1,15 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, StatusBar, Text, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
+import TabNavigation from './src/navigation/Tab/TabNavigation';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <SafeAreaView>
-        <StatusBar />
-        <ScrollView contentInsetAdjustmentBehavior="automatic">
-          <View>
-            <Text>Hello</Text>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </NavigationContainer>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <TabNavigation />
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 };
 
