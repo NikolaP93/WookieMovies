@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Image, StyleSheet} from 'react-native';
+import {Image, StyleSheet} from 'react-native';
 
 interface MovieProps {
   uri: string;
@@ -8,19 +8,13 @@ interface MovieProps {
 const Movie = (props: MovieProps): JSX.Element => {
   const {uri} = props;
 
-  return (
-    <View>
-      <Image source={{uri}} style={styles.image} />
-    </View>
-  );
+  return <Image source={{uri}} style={styles.image} />;
 };
 
 const styles = StyleSheet.create({
-  container: {},
   image: {
-    height: 120,
-    width: 80,
-    marginHorizontal: 10,
+    height: '100%',
+    width: 120,
   },
 });
 

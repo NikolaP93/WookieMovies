@@ -1,4 +1,4 @@
-import {useContext} from 'react';
+import {useContext, useEffect} from 'react';
 import {Context, actions} from '../context/AppContext';
 import API from '../services/API';
 
@@ -15,8 +15,25 @@ function useMoviesData() {
     }
   }
 
+  useEffect(() => {
+    function setUniqueCategories() {
+      const categories: string[] = [];
+
+      state.movies.map(movie =>
+        movie.genres.map(genre => categories.push(genre)),
+      );
+
+      const uniqueCategories = [...new Set(categories)];
+
+      dispatch({type: actions.setUniqueCategories, payload: uniqueCategories});
+    }
+
+    setUniqueCategories();
+  }, [state.movies, dispatch]);
+
   return {
     movies: state.movies,
+    categories: state.categories,
     getMovies,
   };
 }

@@ -3,9 +3,10 @@ import {StyleSheet} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import useMoviesData from '../modules/hooks/useMoviesData';
 import MovieList from '../components/MovieList/MovieList';
+import {ScrollView} from 'react-native-gesture-handler';
 
 const Home = (): JSX.Element => {
-  const {movies, getMovies} = useMoviesData();
+  const {categories, movies, getMovies} = useMoviesData();
 
   useEffect(() => {
     getMovies();
@@ -14,7 +15,17 @@ const Home = (): JSX.Element => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <MovieList categorizedMovies={movies} />
+      <ScrollView
+        contentContainerStyle={styles.scrollContainer}
+        bounces={false}>
+        {categories.map(category => (
+          <MovieList
+            key={category}
+            genre={category}
+            categorizedMovies={movies}
+          />
+        ))}
+      </ScrollView>
     </SafeAreaView>
   );
 };
@@ -22,6 +33,9 @@ const Home = (): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  scrollContainer: {
+    flexGrow: 1,
   },
 });
 
