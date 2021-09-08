@@ -19,11 +19,7 @@ const Home = (): JSX.Element => {
         contentContainerStyle={styles.scrollContainer}
         bounces={false}>
         {categories.map(category => (
-          <MovieList
-            key={category}
-            genre={category}
-            categorizedMovies={movies}
-          />
+          <MovieList key={category} genre={category} movies={movies} />
         ))}
       </ScrollView>
     </SafeAreaView>

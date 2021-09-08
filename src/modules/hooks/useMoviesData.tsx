@@ -5,6 +5,7 @@ import API from '../services/API';
 function useMoviesData() {
   const {state, dispatch} = useContext(Context);
 
+  // get movies by API call and store in state
   async function getMovies() {
     try {
       dispatch({type: actions.setMovies});
@@ -15,7 +16,13 @@ function useMoviesData() {
     }
   }
 
+  // get movie by name from state
+  function getMovie(title: string) {
+    return state.movies.filter(movie => movie.title === title)[0];
+  }
+
   useEffect(() => {
+    // get each unique category
     function setUniqueCategories() {
       const categories: string[] = [];
 
@@ -35,6 +42,7 @@ function useMoviesData() {
     movies: state.movies,
     categories: state.categories,
     getMovies,
+    getMovie,
   };
 }
 

@@ -3,16 +3,22 @@ import {StyleSheet, Dimensions, Text, View} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import {MovieType} from '../../modules/context/AppContext';
 import Movie from '../Movie/Movie';
+import {useNavigation} from '@react-navigation/native';
+import {HomeRoutes} from '../../navigation/config/Routes';
 
 const {height} = Dimensions.get('screen');
 
 type MovieListProps = {
-  categorizedMovies: MovieType[];
+  movies: MovieType[];
   genre: string;
 };
 
 const MovieList = (props: MovieListProps): JSX.Element => {
-  const {categorizedMovies, genre} = props;
+  const {movies, genre} = props;
+  const navigation = useNavigation();
+
+  const onPress = (movieTitle: string) =>
+    navigation.navigate(HomeRoutes.details, {movieTitle});
 
   return (
     <View style={styles.container}>
@@ -24,10 +30,15 @@ const MovieList = (props: MovieListProps): JSX.Element => {
         horizontal
         showsHorizontalScrollIndicator={false}
         bounces={false}>
-        {categorizedMovies.map(
+        {movies.map(
           movie =>
             movie.genres.includes(genre) && (
-              <Movie uri={movie.backdrop} key={movie.id} />
+              <Movie
+                uri={movie.poster}
+                key={movie.id}
+                onPress={onPress}
+                title={movie.title}
+              />
             ),
         )}
       </ScrollView>

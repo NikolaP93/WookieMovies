@@ -6,10 +6,12 @@ export type MovieType = {
   id: string;
   title: string;
   length: string;
-  director: string;
+  director: string[] | string;
   overview: string;
   imdb_rating: number;
   genres: string[];
+  poster: string;
+  released_on: string;
 };
 
 type InitialStateType = {
