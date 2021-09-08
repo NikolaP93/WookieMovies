@@ -9,12 +9,16 @@ const config = {
   },
 };
 
-class APIService {
-  async getMovies(): Promise<AxiosResponse> {
+interface APIInterface {
+  getMovies(): Promise<AxiosResponse>;
+  queryMovies(query: string): Promise<AxiosResponse>;
+}
+
+class APIService implements APIInterface {
+  async getMovies() {
     return axios.get(URL, config);
   }
-
-  async queryMovies(query: string): Promise<AxiosResponse> {
+  async queryMovies(query: string) {
     return axios.get(URL + SEARCH_QUERY_URL + query, config);
   }
 }
