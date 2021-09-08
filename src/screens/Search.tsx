@@ -1,17 +1,25 @@
 import React from 'react';
-import {Text, StyleSheet} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import SearchInput from '../components/Search/Search';
 
 const Search = (): JSX.Element => {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Search Screen</Text>
+      <View style={styles.searchContainer}>
+        <SearchInput />
+      </View>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  searchContainer: {
+    marginVertical: 30,
     flex: 1,
   },
 });

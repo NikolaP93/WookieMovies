@@ -21,6 +21,23 @@ function useMoviesData() {
     return state.movies.filter(movie => movie.title === title)[0];
   }
 
+  async function queryMovies(query: string) {
+    if (query.length === 0) {
+      return dispatch({
+        type: actions.setQueriedMoviesSuccess,
+        payload: [],
+      });
+    }
+
+    try {
+      dispatch({type: actions.setQueriedMovies});
+      const {data} = await API.queryMovies(query);
+      dispatch({type: actions.setQueriedMoviesSuccess, payload: data.movies});
+    } catch (e) {
+      dispatch({type: actions.setQueriedMoviesError});
+    }
+  }
+
   useEffect(() => {
     // get each unique category
     function setUniqueCategories() {
@@ -40,9 +57,11 @@ function useMoviesData() {
 
   return {
     movies: state.movies,
+    queriedMovies: state.queriedMovies,
     categories: state.categories,
     getMovies,
     getMovie,
+    queryMovies,
   };
 }
 

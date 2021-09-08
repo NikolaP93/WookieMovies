@@ -17,6 +17,7 @@ export type MovieType = {
 type InitialStateType = {
   movies: MovieType[];
   categories: string[];
+  queriedMovies: MovieType[];
   error: boolean;
   loading: boolean;
 };
@@ -24,6 +25,7 @@ type InitialStateType = {
 const initialState: InitialStateType = {
   movies: [],
   categories: [],
+  queriedMovies: [],
   error: false,
   loading: false,
 };
@@ -33,6 +35,9 @@ export const actions = {
   setMoviesError: 'setMoviesError',
   setMoviesSuccess: 'setMoviesSuccess',
   setUniqueCategories: 'setUniqueCategories',
+  setQueriedMovies: 'setQueriedMovies',
+  setQueriedMoviesError: 'setQueriedMoviesError',
+  setQueriedMoviesSuccess: 'setQueriedMoviesSuccess',
 };
 
 export type Action = {
@@ -56,6 +61,17 @@ const reducer = (state: InitialStateType, action: Action): InitialStateType => {
       return {...state, loading: false, error: true};
     case actions.setMoviesSuccess:
       return {...state, movies: action.payload, loading: false, error: false};
+    case actions.setQueriedMovies:
+      return {...state, loading: true};
+    case actions.setQueriedMoviesError:
+      return {...state, loading: false, error: true};
+    case actions.setQueriedMoviesSuccess:
+      return {
+        ...state,
+        queriedMovies: action.payload,
+        loading: false,
+        error: false,
+      };
     case actions.setUniqueCategories:
       return {...state, categories: action.payload};
     default:
