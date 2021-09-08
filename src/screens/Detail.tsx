@@ -10,6 +10,9 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import moment from 'moment';
 import useMoviesData from '../modules/hooks/useMoviesData';
 import Movie from '../components/Movie/Movie';
+import StarRating from 'react-native-star-rating';
+
+import constants from '../constants/index';
 
 const {height} = Dimensions.get('screen');
 
@@ -26,6 +29,8 @@ const POSTER_HEIGHT = height / 6;
 const HORIZONTAL_SPACING = 30;
 
 const formatYear = (datestring: string) => moment(datestring).format('YYYY');
+
+// check type and format according to it
 const formatDirector = (director: string[] | string) =>
   typeof director === 'object' ? director.join(', ') : director;
 
@@ -60,6 +65,14 @@ const Detail = (props: Props): JSX.Element => {
       </View>
       <View style={styles.posterContainer}>
         <Movie uri={poster} />
+        <View style={styles.starStyle}>
+          <StarRating
+            rating={imdb_rating / 2}
+            activeOpacity={1}
+            maxStars={5}
+            starSize={TITLE_SIZE}
+          />
+        </View>
       </View>
       <View style={styles.contentContainer}>
         <View style={styles.infoContainer}>
@@ -71,7 +84,10 @@ const Detail = (props: Props): JSX.Element => {
           <Text>{cast.join(', ')}</Text>
         </View>
         <View style={styles.infoContainer}>
-          <Text>Movie Description: {overview}</Text>
+          <Text>
+            {constants.strings.common.movie_description}
+            {overview}
+          </Text>
         </View>
       </View>
     </SafeAreaView>
@@ -103,7 +119,7 @@ const styles = StyleSheet.create({
   posterContainer: {
     height: POSTER_HEIGHT,
     position: 'absolute',
-    alignItems: 'center',
+    alignItems: 'flex-end',
     marginLeft: HORIZONTAL_SPACING,
     top: height / 5,
     zIndex: 1,
@@ -115,8 +131,11 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   title: {
-    color: 'white',
+    color: constants.colors.white,
     fontSize: TITLE_SIZE,
+  },
+  starStyle: {
+    marginHorizontal: 10,
   },
 });
 

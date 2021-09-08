@@ -1,5 +1,6 @@
 import React from 'react';
-import {StyleSheet, Dimensions, Text, View} from 'react-native';
+import {StyleSheet, Dimensions, View} from 'react-native';
+import Text from '../Text/Text';
 import {ScrollView} from 'react-native-gesture-handler';
 import {MovieType} from '../../modules/context/AppContext';
 import Movie from '../Movie/Movie';
@@ -23,7 +24,7 @@ const MovieList = (props: MovieListProps): JSX.Element => {
   return (
     <View style={styles.container}>
       <View style={styles.labelContainer}>
-        <Text style={styles.label}>{genre}</Text>
+        <Text h2>{genre}</Text>
       </View>
       <ScrollView
         contentContainerStyle={styles.scrollContainer}
@@ -62,9 +63,6 @@ const styles = StyleSheet.create({
   },
   labelContainer: {
     marginBottom: 5,
-  },
-  label: {
-    fontSize: 20,
   },
 });
 
