@@ -18,7 +18,7 @@ const Home = (): JSX.Element => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.titleContainer}>
-        {/* <Text h1>{constants.strings.common.title}</Text> */}
+        <Text h1>{constants.strings.common.title}</Text>
       </View>
       <ScrollView
         contentContainerStyle={styles.scrollContainer}
