@@ -6,6 +6,7 @@ import {
   View,
   ScrollView,
   TouchableOpacity,
+  KeyboardAvoidingView,
 } from 'react-native';
 import constants from '../../constants';
 import useMoviesData from '../../modules/hooks/useMoviesData';

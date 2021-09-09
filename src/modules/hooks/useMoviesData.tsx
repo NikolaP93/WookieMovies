@@ -1,6 +1,7 @@
 import {useContext, useEffect} from 'react';
 import {Context, actions} from '../context/AppContext';
 import API from '../services/API';
+import errorMessageHandler from '../../components/ErrorHandler/ErrorHandler';
 
 function useMoviesData() {
   const {state, dispatch} = useContext(Context);
@@ -12,6 +13,7 @@ function useMoviesData() {
       const {data} = await API.getMovies();
       dispatch({type: actions.setMoviesSuccess, payload: data.movies});
     } catch (e) {
+      errorMessageHandler(e);
       dispatch({type: actions.setMoviesError});
     }
   }
@@ -34,6 +36,7 @@ function useMoviesData() {
       const {data} = await API.queryMovies(query);
       dispatch({type: actions.setQueriedMoviesSuccess, payload: data.movies});
     } catch (e) {
+      errorMessageHandler(e);
       dispatch({type: actions.setQueriedMoviesError});
     }
   }
