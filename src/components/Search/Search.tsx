@@ -1,16 +1,26 @@
 import React, {useState, useEffect} from 'react';
-import {StyleSheet, TextInput, Dimensions, View} from 'react-native';
+import {
+  StyleSheet,
+  TextInput,
+  Dimensions,
+  View,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
 import constants from '../../constants';
 import useMoviesData from '../../modules/hooks/useMoviesData';
 import debounce from 'lodash.debounce';
-import {ScrollView} from 'react-native-gesture-handler';
 import Text from '../Text/Text';
+import Movie from '../Movie/Movie';
+import {useNavigation} from '@react-navigation/native';
+import {HomeRoutes} from '../../navigation/config/Routes';
 
 const {height, width} = Dimensions.get('screen');
 
 const SearchInput = () => {
   const [query, setQuery] = useState('');
   const {queryMovies, queriedMovies} = useMoviesData();
+  const navigation = useNavigation();
 
   const debouncedQuery = debounce(queryMovies, 800);
 
@@ -19,13 +29,23 @@ const SearchInput = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
+  const onPress = (movieTitle: string) => {
+    navigation.navigate(HomeRoutes.details, {movieTitle});
+  };
+
   return (
     <View style={styles.mainContainer}>
       <TextInput style={styles.container} onChangeText={setQuery} />
       {queriedMovies.length > 0 && (
         <ScrollView style={styles.scrollView}>
           {queriedMovies.map(movie => (
-            <Text>{movie.title}</Text>
+            <TouchableOpacity
+              key={movie.id}
+              style={styles.results}
+              onPress={() => onPress(movie.title)}>
+              <Movie uri={movie.poster} />
+              <Text>{movie.title}</Text>
+            </TouchableOpacity>
           ))}
         </ScrollView>
       )}
@@ -45,11 +65,21 @@ const styles = StyleSheet.create({
   },
   mainContainer: {
     paddingHorizontal: 10,
-    width: (width * 4) / 5,
     alignItems: 'center',
+    width: (width * 4) / 5,
   },
   scrollView: {
     flexGrow: 1,
+    width: '100%',
+  },
+  results: {
+    flexDirection: 'row',
+    height: 100,
+    alignItems: 'center',
+    width: '100%',
+    marginVertical: 1,
+    borderWidth: 1,
+    paddingVertical: 5,
   },
 });
 

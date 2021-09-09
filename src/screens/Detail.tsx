@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     marginTop: POSTER_HEIGHT / 2,
   },
   backdrop: {
-    height: '100%',
+    height: height / 4,
     width: '100%',
     justifyContent: 'flex-end',
   },
@@ -118,12 +118,9 @@ const styles = StyleSheet.create({
   },
   posterContainer: {
     height: POSTER_HEIGHT,
-    position: 'absolute',
     alignItems: 'flex-end',
     marginLeft: HORIZONTAL_SPACING,
-    top: height / 5,
     zIndex: 1,
-    elevation: 5,
     flexDirection: 'row',
   },
   titleContainer: {

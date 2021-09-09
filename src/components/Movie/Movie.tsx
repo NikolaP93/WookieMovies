@@ -13,7 +13,7 @@ const Movie = (props: MovieProps): JSX.Element => {
 
   return (
     <TouchableWithoutFeedback onPress={() => onPress && onPress(title)}>
-      <Image source={{uri}} style={styles.image} />
+      <Image resizeMode="contain" source={{uri}} style={styles.image} />
     </TouchableWithoutFeedback>
   );
 };
