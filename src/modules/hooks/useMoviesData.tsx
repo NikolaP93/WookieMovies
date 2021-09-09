@@ -62,6 +62,7 @@ function useMoviesData() {
     getMovies,
     getMovie,
     queryMovies,
+    loading: state.loading,
   };
 }
 

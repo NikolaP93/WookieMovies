@@ -3,14 +3,10 @@ import {StyleSheet, TextInput, Dimensions, View} from 'react-native';
 import constants from '../../constants';
 import useMoviesData from '../../modules/hooks/useMoviesData';
 import debounce from 'lodash.debounce';
-import {FlatList, ScrollView} from 'react-native-gesture-handler';
+import {ScrollView} from 'react-native-gesture-handler';
 import Text from '../Text/Text';
 
 const {height, width} = Dimensions.get('screen');
-
-interface Props {
-  // onChange(): void;
-}
 
 const SearchInput = () => {
   const [query, setQuery] = useState('');
@@ -23,19 +19,11 @@ const SearchInput = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
-  const renderItem = (title: string) => {
-    return (
-      <View>
-        <Text>{title}</Text>
-      </View>
-    );
-  };
-
   return (
     <View style={styles.mainContainer}>
       <TextInput style={styles.container} onChangeText={setQuery} />
       {queriedMovies.length > 0 && (
-        <ScrollView style={{flexGrow: 1}}>
+        <ScrollView style={styles.scrollView}>
           {queriedMovies.map(movie => (
             <Text>{movie.title}</Text>
           ))}
@@ -59,6 +47,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     width: (width * 4) / 5,
     alignItems: 'center',
+  },
+  scrollView: {
+    flexGrow: 1,
   },
 });
 
