@@ -13,7 +13,9 @@ function useMoviesData() {
       const {data} = await API.getMovies();
       dispatch({type: actions.setMoviesSuccess, payload: data.movies});
     } catch (e) {
-      errorMessageHandler(e);
+      if (e instanceof Error) {
+        errorMessageHandler(e);
+      }
       dispatch({type: actions.setMoviesError});
     }
   }
@@ -36,7 +38,9 @@ function useMoviesData() {
       const {data} = await API.queryMovies(query);
       dispatch({type: actions.setQueriedMoviesSuccess, payload: data.movies});
     } catch (e) {
-      errorMessageHandler(e);
+      if (e instanceof Error) {
+        errorMessageHandler(e);
+      }
       dispatch({type: actions.setQueriedMoviesError});
     }
   }
