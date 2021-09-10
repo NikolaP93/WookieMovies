@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests home screen takes snapshot of home screen 1`] = `
+<RNCSafeAreaView
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "width": 120,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 30,
+        }
+      }
+    >
+      Wookie Movies
+    </Text>
+  </View>
+  <RCTScrollView
+    bounces={false}
+    contentContainerStyle={
+      Object {
+        "flexGrow": 1,
+      }
+    }
+  >
+    <View />
+  </RCTScrollView>
+</RNCSafeAreaView>
+`;

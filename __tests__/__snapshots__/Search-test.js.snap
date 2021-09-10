@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`takes snapshot of search screen 1`] = `
+<RNCSafeAreaView
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "marginVertical": 30,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "paddingHorizontal": 10,
+          "width": 600,
+        }
+      }
+    >
+      <TextInput
+        onChangeText={[Function]}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderRadius": 10,
+            "borderWidth": 1,
+            "height": 88.93333333333334,
+            "marginVertical": 10,
+            "paddingHorizontal": 15,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+  </View>
+</RNCSafeAreaView>
+`;

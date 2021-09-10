@@ -20,3 +20,7 @@ npm/yarn run android
 ### run on ios
 
 npm/yarn run ios
+
+### run tests
+
+yarn test
