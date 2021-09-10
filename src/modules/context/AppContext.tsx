@@ -18,6 +18,7 @@ type InitialStateType = {
   movies: MovieType[];
   categories: string[];
   queriedMovies: MovieType[];
+  favoriteMovies: string[];
   error: boolean;
   loading: boolean;
 };
@@ -26,6 +27,7 @@ const initialState: InitialStateType = {
   movies: [],
   categories: [],
   queriedMovies: [],
+  favoriteMovies: [],
   error: false,
   loading: false,
 };
@@ -38,6 +40,9 @@ export const actions = {
   setQueriedMovies: 'setQueriedMovies',
   setQueriedMoviesError: 'setQueriedMoviesError',
   setQueriedMoviesSuccess: 'setQueriedMoviesSuccess',
+  setFavoriteMovie: 'setFavoriteMovie',
+  setFavoriteMovieError: 'setFavoriteMovieError',
+  setFavoriteMovieSuccess: 'setFavoriteMovieSuccess',
 };
 
 export type Action = {
@@ -69,6 +74,17 @@ const reducer = (state: InitialStateType, action: Action): InitialStateType => {
       return {
         ...state,
         queriedMovies: action.payload,
+        loading: false,
+        error: false,
+      };
+    case actions.setFavoriteMovie:
+      return {...state, loading: true};
+    case actions.setFavoriteMovieError:
+      return {...state, loading: false, error: true};
+    case actions.setFavoriteMovieSuccess:
+      return {
+        ...state,
+        favoriteMovies: action.payload,
         loading: false,
         error: false,
       };

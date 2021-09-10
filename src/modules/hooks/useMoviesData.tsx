@@ -3,6 +3,7 @@ import {Context, actions} from '../context/AppContext';
 import API from '../services/API';
 import errorMessageHandler from '../../components/ErrorHandler/ErrorHandler';
 import RNBootSplash from 'react-native-bootsplash';
+import localStorage from '../../utils/Storage';
 
 function useMoviesData() {
   const {state, dispatch} = useContext(Context);
@@ -28,6 +29,33 @@ function useMoviesData() {
     return state.movies.filter(movie => movie.title === title)[0];
   }
 
+  async function setFavoriteMovie(movie: string) {
+    dispatch({type: actions.setFavoriteMovie});
+
+    const movieExists = state.favoriteMovies.includes(movie);
+    if (movieExists) {
+      const movieIndex = state.favoriteMovies.indexOf(movie);
+      const payload = [...state.favoriteMovies];
+      payload.splice(movieIndex, 1);
+      localStorage.deleteFavorite(payload);
+      return dispatch({
+        type: actions.setFavoriteMovieSuccess,
+        payload,
+      });
+    }
+    localStorage.setFavorite(movie);
+    dispatch({
+      type: actions.setFavoriteMovieSuccess,
+      payload: state.favoriteMovies.concat(movie),
+    });
+  }
+
+  async function getFavoriteMovies() {
+    dispatch({type: actions.setFavoriteMovie});
+    const payload = await localStorage.getFavorite();
+    dispatch({type: actions.setFavoriteMovieSuccess, payload});
+  }
+
   async function queryMovies(query: string) {
     if (query.length === 0) {
       return dispatch({
@@ -50,6 +78,7 @@ function useMoviesData() {
 
   useEffect(() => {
     getMovies();
+    getFavoriteMovies();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -77,6 +106,8 @@ function useMoviesData() {
     getMovie,
     queryMovies,
     loading: state.loading,
+    setFavoriteMovie,
+    favoriteMovies: state.favoriteMovies,
   };
 }
 
