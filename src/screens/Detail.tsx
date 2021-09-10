@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Dimensions,
   ImageBackground,
+  TouchableOpacity,
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import moment from 'moment';
@@ -41,7 +42,7 @@ const Detail = (props: Props): JSX.Element => {
     },
   } = props;
 
-  const {getMovie} = useMoviesData();
+  const {getMovie, favoriteMovies, setFavoriteMovie} = useMoviesData();
   const {
     backdrop,
     cast,
@@ -66,6 +67,18 @@ const Detail = (props: Props): JSX.Element => {
       <View style={styles.posterContainer}>
         <Movie uri={poster} />
         <View style={styles.starStyle}>
+          <TouchableOpacity
+            onPress={() => setFavoriteMovie(title)}
+            style={[
+              styles.favoriteButton,
+              {
+                backgroundColor: favoriteMovies.includes(title)
+                  ? constants.colors.yellow
+                  : constants.colors.white,
+              },
+            ]}>
+            <Text>{constants.strings.common.favorite}</Text>
+          </TouchableOpacity>
           <StarRating
             rating={imdb_rating / 2}
             activeOpacity={1}
@@ -134,6 +147,13 @@ const styles = StyleSheet.create({
   },
   starStyle: {
     marginHorizontal: 10,
+  },
+  favoriteButton: {
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: constants.colors.black,
+    marginVertical: 5,
+    alignItems: 'center',
   },
 });
 
