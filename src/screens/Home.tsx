@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {StyleSheet, View, ScrollView} from 'react-native';
 import Text from '../components/Text/Text';
 import {SafeAreaView} from 'react-native-safe-area-context';
@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
+    backgroundColor: constants.colors.white,
   },
   scrollContainer: {
     flexGrow: 1,

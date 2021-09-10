@@ -97,6 +97,7 @@ const Detail = (props: Props): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
+    backgroundColor: constants.colors.white,
   },
   backdropContainer: {
     flex: 3,
