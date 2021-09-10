@@ -2,6 +2,7 @@ import {useContext, useEffect} from 'react';
 import {Context, actions} from '../context/AppContext';
 import API from '../services/API';
 import errorMessageHandler from '../../components/ErrorHandler/ErrorHandler';
+import RNBootSplash from 'react-native-bootsplash';
 
 function useMoviesData() {
   const {state, dispatch} = useContext(Context);
@@ -17,6 +18,8 @@ function useMoviesData() {
         errorMessageHandler(e);
       }
       dispatch({type: actions.setMoviesError});
+    } finally {
+      RNBootSplash.hide();
     }
   }
 
