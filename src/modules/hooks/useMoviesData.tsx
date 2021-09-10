@@ -42,6 +42,11 @@ function useMoviesData() {
   }
 
   useEffect(() => {
+    getMovies();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
     // get each unique category
     function setUniqueCategories() {
       const categories: string[] = [];
@@ -62,7 +67,6 @@ function useMoviesData() {
     movies: state.movies,
     queriedMovies: state.queriedMovies,
     categories: state.categories,
-    getMovies,
     getMovie,
     queryMovies,
     loading: state.loading,

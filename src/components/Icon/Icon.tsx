@@ -7,14 +7,21 @@ export interface IconProps {
   onPress?(): any;
   color: string;
   type: IconTypes;
+  testId: string;
 }
 
 const Icon = (props: IconProps): JSX.Element => {
-  const {color, name, onPress, size, type} = props;
+  const {color, name, onPress, size, type, testId} = props;
   const IconComponent = getIconType(type);
 
   return (
-    <IconComponent size={size} name={name} color={color} onPress={onPress} />
+    <IconComponent
+      testID={testId}
+      size={size}
+      name={name}
+      color={color}
+      onPress={onPress}
+    />
   );
 };
 

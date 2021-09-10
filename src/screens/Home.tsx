@@ -8,12 +8,7 @@ import MovieList from '../components/MovieList/MovieList';
 import constants from '../constants/index';
 
 const Home = (): JSX.Element => {
-  const {categories, movies, getMovies} = useMoviesData();
-
-  useEffect(() => {
-    getMovies();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const {categories, movies} = useMoviesData();
 
   return (
     <SafeAreaView style={styles.container}>

@@ -15,6 +15,7 @@ const homeIconProps: IconProps = {
   name: 'home',
   size: 28,
   type: 'font-awesome',
+  testId: 'Home',
 };
 
 const searchIconProps: IconProps = {
@@ -22,6 +23,7 @@ const searchIconProps: IconProps = {
   name: 'search',
   size: 28,
   type: 'font-awesome',
+  testId: 'Search',
 };
 
 const TabNavigation = (): JSX.Element => {
