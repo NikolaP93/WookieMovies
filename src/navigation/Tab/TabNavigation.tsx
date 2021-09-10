@@ -7,6 +7,8 @@ import StackNavigation from '../Stack/StackNavigation';
 
 import config from '../config/config';
 import Icon, {IconProps} from '../../components/Icon/Icon';
+import {NavigationState} from '@react-navigation/routers';
+import {NavigationProp} from '@react-navigation/core';
 
 const Tab = createBottomTabNavigator();
 
@@ -25,6 +27,17 @@ const searchIconProps: IconProps = {
   type: 'font-awesome',
   testId: 'Search',
 };
+
+type Navigation = NavigationProp<NavigationState>;
+
+export interface NavigationParams {
+  navigate: (
+    route: string,
+    params?: {
+      movieTitle: string;
+    },
+  ) => null;
+}
 
 const TabNavigation = (): JSX.Element => {
   return (

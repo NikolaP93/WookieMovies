@@ -6,6 +6,7 @@ import {MovieType} from '../../modules/context/AppContext';
 import Movie from '../Movie/Movie';
 import {useNavigation} from '@react-navigation/native';
 import {HomeRoutes} from '../../navigation/config/Routes';
+import {NavigationParams} from '../../navigation/Tab/TabNavigation';
 
 const {height} = Dimensions.get('screen');
 
@@ -16,7 +17,7 @@ type MovieListProps = {
 
 const MovieList = (props: MovieListProps): JSX.Element => {
   const {movies, genre} = props;
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationParams>();
 
   const onPress = (movieTitle: string) =>
     navigation.navigate(HomeRoutes.details, {movieTitle});

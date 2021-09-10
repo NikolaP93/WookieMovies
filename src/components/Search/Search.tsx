@@ -6,7 +6,6 @@ import {
   View,
   ScrollView,
   TouchableOpacity,
-  KeyboardAvoidingView,
 } from 'react-native';
 import constants from '../../constants';
 import useMoviesData from '../../modules/hooks/useMoviesData';
@@ -15,13 +14,14 @@ import Text from '../Text/Text';
 import Movie from '../Movie/Movie';
 import {useNavigation} from '@react-navigation/native';
 import {HomeRoutes} from '../../navigation/config/Routes';
+import {NavigationParams} from '../../navigation/Tab/TabNavigation';
 
 const {height, width} = Dimensions.get('screen');
 
 const SearchInput = () => {
   const [query, setQuery] = useState('');
   const {queryMovies, queriedMovies} = useMoviesData();
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationParams>();
 
   const debouncedQuery = debounce(queryMovies, 800);
 
