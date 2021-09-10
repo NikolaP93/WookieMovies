@@ -24,3 +24,9 @@ npm/yarn run ios
 ### run tests
 
 yarn test
+
+### extra features
+
+User can set a favorite movie while on the Details screen via the favorite button;
+
+Added image at the root of the application named "poc.png" for demonstration purposes
